@@ -4,12 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "cd frontend && cd books_app && npm run build",
+    "build": "cd frontend && cd books_app && npm start",
     "install-client": "cd frontend && cd books_app && npm install",
     "heroku-postbuild": "npm run install-client && npm run build",
-    "server": "nodemon app.js",
-    "develop": "concurrently --kill-others-on-fail \"npm run server\" \"npm run start --prefix client\"",
-    "start": "concurrently --kill-others-on-fail \"npm run server\" \"npm run start --prefix client\""
+    "app": "nodemon app.js",
+    "develop": "concurrently --kill-others-on-fail \"npm run app\" \"npm run start --prefix client\"",
+    "start": "concurrently --kill-others-on-fail \"npm run app\" \"npm run start --prefix client\""
   },
   "author": "",
   "license": "ISC",
