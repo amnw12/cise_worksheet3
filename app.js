@@ -14,15 +14,6 @@ connectDB();
 app.use(cors({ origin: true, credentials: true }));
 
 // Init Middleware
-
-
-// use Routes
-app.use('/api/books', books);
-
-const port = process.env.PORT || 5000;
-
-app.listen(port, () => console.log(`Server running on port ${port}`));
-
 const path = require('path')
 // Serve static files from the React frontend app
 
@@ -32,5 +23,9 @@ app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname + '/frontend/books_app/build/index.html'))
 })
 
+// use Routes
+app.use('/api/books', books);
 
+const port = process.env.PORT || 5000;
 
+app.listen(port, () => console.log(`Server running on port ${port}`));
