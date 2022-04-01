@@ -9,7 +9,7 @@
     "heroku-postbuild": "npm run install-client && npm run build",
     "app": "nodemon app.js",
     "develop": "concurrently --kill-others-on-fail \"npm run app\" \"npm run start --prefix client\"",
-    "start": "concurrently --kill-others-on-fail \"node app\" \"cd frontend && cd books_app && npm start\""
+    "start": "concurrently --kill-others-on-fail \"node app.js\" \"cd frontend && cd books_app && npm start\""
   },
   "author": "",
   "license": "ISC",
