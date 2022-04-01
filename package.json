@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "cd frontend && cd books_app && npm build",
+    "build": "cd frontend && cd books_app && npm run build",
     "install-client": "cd frontend && cd books_app && npm install",
     "heroku-postbuild": "npm run install-client && npm run build",
     "app": "nodemon app.js",
